@@ -1,6 +1,6 @@
 name: kd_api_call
 description: A composable, multi-platform, Future-based API for HTTP requests.
-version: 0.0.2
+version: 0.0.3
 homepage: https://gitlab.com/kdsutariya3022/api-call-package
 
 environment:
