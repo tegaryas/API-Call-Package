@@ -42,20 +42,19 @@ class ApiCall {
         type: ExceptionType.TimeOut,
       );
     } catch (error) {
-      throw error;
+      throw error.toString();
     }
   }
 
   //Check Internet connectivity...
-  static Future<bool> checkConnectivity() async {
-    var connectivity = await Connectivity().checkConnectivity();
+  static Future<void> checkConnectivity() async {
+    ConnectivityResult connectivity = await Connectivity().checkConnectivity();
     if (connectivity == ConnectivityResult.none) {
       throw AppException(
         title: APIErrorMsg.noInternet,
         message: APIErrorMsg.noInternetMsg,
       );
     }
-    return true;
   }
 
   //Call API...
@@ -177,7 +176,7 @@ class ApiCall {
         |--------------------------------------------------------------------------------------------------------------------------
         | API        :- $serviceName
         | StatusCode :- ${response.statusCode}
-        | Message    :- ${response.body }
+        | Message    :- ${response.body}
         |--------------------------------------------------------------------------------------------------------------------------
         """;
     print(apiLog);
@@ -196,8 +195,8 @@ class APIRequestInfoObj {
 
   APIRequestInfoObj({
     this.requestType = HTTPRequestType.POST,
-     this.parameter,
-     this.headers,
+    this.parameter,
+    this.headers,
     this.docList = const [],
     required this.url,
     this.serviceName = "",

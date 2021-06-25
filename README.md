@@ -13,13 +13,13 @@ The easiest way to use this library is via the top-level functions. They allow
 you to make individual HTTP requests with minimal hassle:
 
 ```dart
-import 'kd_api_call/api_call.dart';
+import 'package:kd_api_call/kd_api_call.dart';
 
  APIRequestInfoObj requestInfo = APIRequestInfoObj(
         url: "https://jsonplaceholder.typicode.com/albums/1",
         requestType: HTTPRequestType.GET,
       );
-      
+
 Response apiResponse =
           await ApiCall.callService(requestInfo: requestInfo);
 
