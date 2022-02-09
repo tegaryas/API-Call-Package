@@ -1,6 +1,5 @@
 part of kd_api_call;
 
-
 class AppException implements Exception {
   final String? message;
   final String? title;
