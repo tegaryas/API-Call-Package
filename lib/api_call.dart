@@ -42,7 +42,7 @@ class ApiCall {
         type: ExceptionType.TimeOut,
       );
     } catch (error) {
-      throw error.toString();
+      throw error;
     }
   }
 
