@@ -75,8 +75,10 @@ class ApiCall {
       case HTTPRequestType.POST:
         response = await http.post(
           Uri.parse(_url),
-          // Uri(),
-          body: json.encode(requestInfo.parameter),
+          body:
+              (requestInfo.parameter is Map?) || (requestInfo.parameter is Map)
+                  ? json.encode(requestInfo.parameter)
+                  : requestInfo.parameter,
           headers: apiHeader,
         );
         break;
@@ -95,7 +97,10 @@ class ApiCall {
       case HTTPRequestType.PUT:
         response = await http.put(
           Uri.parse(_url),
-          body: json.encode(requestInfo.parameter),
+          body:
+              (requestInfo.parameter is Map?) || (requestInfo.parameter is Map)
+                  ? json.encode(requestInfo.parameter)
+                  : requestInfo.parameter,
           headers: apiHeader,
         );
         break;
@@ -118,7 +123,10 @@ class ApiCall {
         requestInfo.requestType.toString().split(".").last, uri);
 
     //Add Parameters...
-    requestInfo.parameter?.forEach((key, value) => request.fields[key] = value);
+    if ((requestInfo.parameter is Map?) || (requestInfo.parameter is Map)) {
+      (requestInfo.parameter as Map?)
+          ?.forEach((key, value) => request.fields[key] = value);
+    }
 
     //Add header...
     Map<String, dynamic>? apiHeader = requestInfo.headers;
@@ -187,7 +195,7 @@ class ApiCall {
 class APIRequestInfoObj {
   HTTPRequestType requestType;
   String url;
-  Map<String, dynamic>? parameter;
+  Object? parameter;
   Map<String, String>? headers;
   List<UploadDocumentObj> docList;
   String serviceName;

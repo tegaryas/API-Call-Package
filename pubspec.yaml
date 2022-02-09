@@ -1,22 +1,20 @@
 name: kd_api_call
 description: A composable, multi-platform, Future-based API for HTTP requests.
-version: 0.0.3
+version: 0.0.4
 homepage: https://gitlab.com/kdsutariya3022/api-call-package
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.16.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  connectivity_plus: ^1.0.4
-  http: ^0.13.3   
-  path: ^1.8.0
+  connectivity_plus: ^2.2.0
+  http: ^0.13.4   
+  path: ^1.8.1
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^1.0.0
+  test: ^1.16.0
+  flutter_lints: ^1.0.4
   
 flutter:
