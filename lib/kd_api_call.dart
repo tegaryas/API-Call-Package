@@ -12,3 +12,4 @@ import 'package:path/path.dart';
 part 'api_call.dart';
 part 'api_error_msg.dart';
 part 'app_exception.dart';
+part 'api_call_instance.dart';

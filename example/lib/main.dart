@@ -59,14 +59,14 @@ class _MyAppState extends State<MyApp> {
         });
       }
       // Api request info...
-      APIRequestInfoObj requestInfo = APIRequestInfoObj(
+      APIRequestInfo requestInfo = APIRequestInfo(
         url: "https://jsonplaceholder.typicode.com/albums/1",
         requestType: HTTPRequestType.GET,
       );
 
       // Call api...
       // Await the http get response, then decode the json-formatted response.
-      apiResponse = await ApiCall.callService(requestInfo: requestInfo);
+      apiResponse = await ApiCall.instance.callService(requestInfo: requestInfo);
     } catch (e) {
       // Show error in snack bar...
       ScaffoldMessenger.of(context).showSnackBar(

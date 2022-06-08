@@ -91,4 +91,6 @@ enum HTTPRequestType {
   GET,
   DELETE,
   PUT,
+  PATCH,
+
 }
