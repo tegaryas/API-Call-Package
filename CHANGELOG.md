@@ -1,6 +1,7 @@
 ## 0.1.0
 
-
+* Optimization and refactoring of the code.
+* Documentation update.
 
 ## 0.0.9
 
@@ -9,7 +10,7 @@
 
 ## 0.0.8
 
-* Documentation fixes.
+* Documentation update.
 
 ## 0.0.7
 

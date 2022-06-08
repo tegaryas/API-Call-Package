@@ -13,7 +13,7 @@ and the browser.
   - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Initialization](#initialization)
-  - [Use](#Using)
+  - [Usage](#Usage)
   - [Parameters and Response Logs](#parameters-and-response-logs)
   - [Examples](https://pub.dev/packages/kd_api_call/example)
   - [License](https://pub.dev/packages/kd_api_call/license)
@@ -38,7 +38,7 @@ First, import dependeny:
 import 'package:kd_api_call/kd_api_call.dart';
 ```
 
-### Using
+### Usage
 
 The top-level functions are the simplest method to utilise this module. They let
 you make individual HTTP queries with a minimum of fuss:
@@ -59,21 +59,24 @@ You can find a complete example [here](./example/lib/main.dart)
 
 ### Parameters and Response Logs
 
-Service Parameters
+```text
+ Service Parameters
 |-------------------------------------------------------------------------------------------------------------------------
 | ApiType :- GET
 | URL     :- https://jsonplaceholder.typicode.com/albums/1
 | Header  :- {Content-Type: application/json}
 | Params  :- null
 |-------------------------------------------------------------------------------------------------------------------------
+```
 
-
+```text
  Service Response
 |--------------------------------------------------------------------------------------------------------------------------
 | API        :- https://jsonplaceholder.typicode.com/albums/1
 | StatusCode :- 200
 | Message    :- {"userId": 1, "id": 1, "title": "quidem molestiae enim"
 |--------------------------------------------------------------------------------------------------------------------------
+```
 
 ## Features and bugs
 
