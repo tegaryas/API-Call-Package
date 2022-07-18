@@ -140,8 +140,8 @@ class ApiCallPlatInstance {
 
     //Add Parameters...
     if ((requestInfo.parameter is Map?) || (requestInfo.parameter is Map)) {
-      (requestInfo.parameter as Map?)
-          ?.forEach((key, value) => request.fields[key] = value.toString());
+      (requestInfo.parameter as Map<String,dynamic>?)
+          ?.forEach((key, value) => request.fields[key] = value);
     }
 
     //Add header...
