@@ -95,6 +95,10 @@ class ApiCallPlatInstance {
       case HTTPRequestType.DELETE:
         response = await http.delete(
           Uri.parse(_url),
+          body:
+              (requestInfo.parameter is Map?) || (requestInfo.parameter is Map)
+                  ? json.encode(requestInfo.parameter)
+                  : requestInfo.parameter,
           headers: apiHeader,
         );
         break;
@@ -142,7 +146,7 @@ class ApiCallPlatInstance {
     if ((requestInfo.parameter is Map?) || (requestInfo.parameter is Map)) {
       (requestInfo.parameter as Map<String, dynamic>?)
           ?.forEach((key, value) => request.fields[key] = value);
-    }else{
+    } else {
       request.fields.addAll(jsonDecode(requestInfo.parameter as String));
     }
 

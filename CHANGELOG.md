@@ -1,3 +1,8 @@
+## 0.1.1
+
+* Optimization and refactoring of the code.
+* Improve delete api call.
+
 ## 0.1.0
 
 * Optimization and refactoring of the code.
